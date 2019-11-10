@@ -5,13 +5,14 @@
     .module("lunchTime", [])
     .controller("lunchController", lunchController);
   lunchController.$inject = ["$scope"];
-  function lunchController($scope) {
-    $scope.Check = function() {
-      const items = $scope.lunchItem.split(",");
+  function lunchController() {
+    var vm = this;
+    vm.Check = function() {
+      const items = vm.lunchItem.split(",");
       if (items.length <= 3) {
-        $scope.message = "Enjoy!";
+        vm.message = "Enjoy!";
       } else {
-        $scope.message = "Too much!";
+        vm.message = "Too much!";
       }
     };
   }

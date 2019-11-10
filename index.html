@@ -14,7 +14,7 @@
     </style>
   </head>
   <body>
-    <div class="container" ng-controller="lunchController">
+    <div class="container" ng-controller="lunchController as rem">
       <h1>Lunch Checker</h1>
       <div class="form-group">
         <input
@@ -22,16 +22,16 @@
           type="text"
           placeholder="list comma separated dishes you usually have for lunch"
           class="form-control"
-          ng-model="lunchItem"
+          ng-model="rem.lunchItem"
         />
       </div>
       <div class="form-group">
-        <button class="btn btn-default" ng-click="Check()">
+        <button class="btn btn-default" ng-click="rem.Check()">
           Check If Too Much
         </button>
       </div>
       <div class="form-group message">
-        <p>the response is : {{ message }}</p>
+        <p>the response is : {{ rem.message }}</p>
       </div>
     </div>
   </body>
